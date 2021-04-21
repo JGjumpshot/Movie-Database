@@ -1,0 +1,58 @@
+@font-face {
+    font-family: cinema;
+    src: url(cinema_st.ttf);
+}
+
+.table-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 35px;
+}
+
+.form-control {
+    background-color: rgb(165, 160, 160);
+    width: 43vw;
+    height: 90vh;
+}
+
+.form-input {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 43vw;
+    text-align: center;
+    font-family: 'Lobster';
+    height: 50vh;
+    flex-flow: wrap;
+    justify-content: space-around;
+}
+
+input[type=text] {
+    /* border: none; */
+    border-radius: 4px;
+    border-color: black;
+}
+
+select {
+    /* border: none; */
+    border-radius: 4px;
+    border: solid 2px black;
+}
+
+.add-a-movie-title {
+    text-align: center; 
+    font-size: 45px;
+    font-family: cinema;
+}
+
+.movie-list {
+    background-color: rgb(165, 160, 160);
+    width: 43vw;
+    height: 90vh;
+}
+
+.my-movie-title {
+    text-align: center;
+    font-size: 45px;
+    font-family: cinema;
+}
