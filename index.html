@@ -13,35 +13,39 @@
 
 <body>
     <div class="table-wrapper">
-        <section class="form-control">
+        <section id="form-control">
             <h2 class="add-a-movie-title">Add a Movie</h2>
-            <form class="form-input" action="post">
+            <form name="editForm" class="form-input" action="post">
                 <div>
                     <label for="movie-title">Movie Title:</label>
-                    <input type="text" id="movie-title">
+                    <input name="movieTitle" type="text" id="movie-title">
+                    <div id="movieTitleError">&nbsp;</div>
                 </div>
                 <div>
                     <label for="movie-rating">Movie Rating:</label>
-                    <select type="text" id="movie-rating">
+                    <select name="movieRating" type="text" id="movie-rating">
                         <option value="G">G</option>
                         <option value="PG">PG</option>
                         <option value="PG-13">PG-13</option>
                         <option value="PG-13">R</option>
                     </select>
+                    <div id="movieRatingError">&nbsp;</div>
                 </div>
                 <div>
                     <label for="year-produced">Year Produced:</label>
-                    <input type="text" id="year-produced">
+                    <input name="yearProduced"type="text" id="year-produced">
+                    <div id="yearProducedError">&nbsp;</div>
                 </div>
                 <div>
                     <label for="rating">Your Rating:</label>
-                    <select type="text" id="rating">
+                    <select name="yourRating" type="text" id="rating">
                         <option value="5">5⭐⭐⭐⭐⭐</option>
                         <option value="4">4⭐⭐⭐⭐</option>
                         <option value="3">3⭐⭐⭐</option>
                         <option value="2">2⭐⭐</option>
                         <option value="1">1⭐</option>
                     </select>
+                    <div id="yourRatingError">&nbsp;</div>
                 </div>
 
                 <div class="radio-wrapper">
@@ -56,8 +60,9 @@
                     <input type="radio" name="genre" id="romance"></input>
                     <label for="sci-fi/fantasy">sci-fi/fantasy</label>
                     <input type="radio" name="genre" id="sci-fi/fantasy"></input>
+                    <div id="genreError">&nbsp;</div>
                 </div>
-                
+
                 <div>
                     <label for="viewing-option">Viewing Option:</label>
                     <select name="viewing-option" id="viewing-option">
@@ -65,11 +70,35 @@
                         <option value="dvd">DVD</option>
                         <option value="blu-ray">Blu-Ray</option>
                     </select>
+                    <div id="viewingOptionError">&nbsp;</div>
                 </div>
+                <input name="createBtn" id="createBtn" class="submit" type="submit" value="Create">
             </form>
+
         </section>
-        <section class="movie-list">
+        <section id="movie-list">
             <h2 class="my-movie-title">My Movies</h2>
+            <div class="flex-table-wrapper">
+                <div class="table-headers">
+                    <div>Title</div>
+                    <div>Movie Rating</div>
+                    <div>Year Produced</div>
+                    <div>Your Rating</div>
+                    <div>Genre</div>
+                    <div>Viewing Option</div>
+                </div>
+    
+                <div class="row1">
+                    <div>Empire Strikes Back</div>
+                    <div>PG</div>
+                    <div>1980</div>
+                    <div>5</div>
+                    <div>Sci-fi/Fantasy</div>
+                    <div>Streaming</div>
+                </div>
+            </div>
+            
+
         </section>
 
         <script src=""></script>

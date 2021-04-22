@@ -9,10 +9,11 @@
     margin: 35px;
 }
 
-.form-control {
+#form-control {
     background-color: rgb(165, 160, 160);
     width: 43vw;
     height: 90vh;
+    display: none; /* this could be a problem*/
 }
 
 .form-input {
@@ -45,9 +46,9 @@ select {
     font-family: cinema;
 }
 
-.movie-list {
+#movie-list {
     background-color: rgb(165, 160, 160);
-    width: 43vw;
+    width: 100vw;
     height: 90vh;
 }
 
@@ -55,4 +56,47 @@ select {
     text-align: center;
     font-size: 45px;
     font-family: cinema;
+}
+
+.submit {
+    border: outset 5px;
+    border-radius: 10px;
+    background-color: yellow;
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    text-decoration: underline;
+    font-family: 'Lobster';
+}
+
+.submit:hover {
+    cursor: pointer;
+}
+
+.table-headers {
+    font-family: 'Lobster';
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px;
+    border-top: solid 2px black;
+    border-bottom: solid 2px black;
+}
+
+.table-headers > div {
+    border-left: solid 2px black;
+}
+
+.flex-table-wrapper {
+    display: flex; 
+    flex-direction: column;
+    flex: 1;
+}
+
+.row1 > div {
+    font-family: 'Lobster';
+    display: flex;
+    /* justify-content: space-between; */
+    padding: 0px 20px;
+    border-top: solid 2px black;
+    border-bottom: solid 2px black;
 }
