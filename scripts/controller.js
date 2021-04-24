@@ -1,6 +1,6 @@
 function onPageLoad() {
-    //document.getElementById("createBtn").onclick = onCreateBtnClicked;
-    //document.getElementById("cancelBtn").onclick = onCancelBtnClicked;
+    document.getElementById("createBtn").onclick = onCreateBtnClicked;
+    document.getElementById("cancelBtn").onclick = onCancelBtnClicked;
     document.getElementById("newBtn").onclick = onNewBtnClicked;
 
     let items = modelGetAllMovies();
@@ -8,6 +8,25 @@ function onPageLoad() {
         addTableItem(items[i]);
     }
 
+    clearInputForm();
+}
+
+function onCreateBtnClicked() {
+    if (!validateControls()) {
+        return;
+    }
+
+    let form = document.forms["form-control"];
+    // let newMovie = modelCreateMovie(
+    //     form.
+    // )
+}
+
+function validateControls() {
+    return true;
+}
+
+function onCancelBtnClicked() {
     clearInputForm();
 }
 
