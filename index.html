@@ -14,7 +14,7 @@
 <body>
     <div class="table-wrapper">
         <section id="form-control">
-            <h2 class="add-a-movie-title">Add a Movie</h2>
+            <h1 id="add-a-movie-title"></h1>
             <form name="editForm" class="form-input" action="post">
                 <div>
                     <label for="movie-title">Movie Title:</label>
@@ -33,7 +33,7 @@
                 </div>
                 <div>
                     <label for="year-produced">Year Produced:</label>
-                    <input name="yearProduced"type="text" id="year-produced">
+                    <input name="yearProduced" type="text" id="year-produced">
                     <div id="yearProducedError">&nbsp;</div>
                 </div>
                 <div>
@@ -65,20 +65,20 @@
 
                 <div>
                     <label for="viewing-option">Viewing Option:</label>
-                    <select name="viewing-option" id="viewing-option">
+                    <select name="viewingOption" id="viewing-option">
                         <option default value="streaming">Streaming</option>
                         <option value="dvd">DVD</option>
                         <option value="blu-ray">Blu-Ray</option>
                     </select>
                     <div id="viewingOptionError">&nbsp;</div>
                 </div>
-                <input name="createBtn" id="createBtn" class="submit" type="submit" value="Create">
+                <input name="submitBtn" id="submitBtn" class="submit" type="submit" value="Submit">
             </form>
 
         </section>
         <section id="movie-list">
             <h2 class="my-movie-title">My Movies</h2>
-            <div class="flex-table-wrapper">
+            <!-- <div class="flex-table-wrapper">
                 <div class="table-headers">
                     <div>Title</div>
                     <div>Movie Rating</div>
@@ -86,22 +86,35 @@
                     <div>Your Rating</div>
                     <div>Genre</div>
                     <div>Viewing Option</div>
-                </div>
-    
-                <div class="row1">
-                    <div>Empire Strikes Back</div>
-                    <div>PG</div>
-                    <div>1980</div>
-                    <div>5</div>
-                    <div>Sci-fi/Fantasy</div>
-                    <div>Streaming</div>
-                </div>
-            </div>
-            
+                </div> -->
 
-        </section>
+            <table border="1" id="movieTable">
+                <tr>
+                    <th>Title</th>
+                    <th>Movie Rating</th>
+                    <th>Year Produced</th>
+                    <th>Your Rating</th>
+                    <th>Genre</th>
+                    <th>Viewing Option</th>
+                </tr>
+            </table>
+            <input name="newBtn" id="newBtn" class="new-movie" type="submit" value="New Movie">
+    </div>
 
-        <script src=""></script>
+
+    </section>
+
+    <script src="./scripts/model.js"></script>
+    <script src="./scripts/controller.js"></script>
+    <script>
+        modelCreateMovie("Empire Strikes Back", "PG", "1980", 5, "Sci-fi/Fantasy", "Streaming");
+        modelCreateMovie("Harry Potter and the Chamber of Secrets", "PG", "2002", 4, "Sci-fi/Fantasy", "DVD");
+        modelCreateMovie("Captain America: The Winter Soldier", "PG-13", "2014", 5, "Action/Adventure", "Blu-Ray");
+        modelCreateMovie("Avengers Infinity War", "PG-13", "2018", 5, "Action/Adventure", "Streaming");
+        modelCreateMovie("Avengers Endgame", "PG-13", "2019", 5, "Action/Adventure", "Streaming");
+
+        onPageLoad();
+    </script>
     </div>
 
 </body>

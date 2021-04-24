@@ -13,7 +13,7 @@
     background-color: rgb(165, 160, 160);
     width: 43vw;
     height: 90vh;
-    display: none; /* this could be a problem*/
+    /* display: none; this could be a problem */
 }
 
 .form-input {
@@ -40,7 +40,7 @@ select {
     border: solid 2px black;
 }
 
-.add-a-movie-title {
+#add-a-movie-title {
     text-align: center; 
     font-size: 45px;
     font-family: cinema;
@@ -59,6 +59,9 @@ select {
 }
 
 .submit {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
     border: outset 5px;
     border-radius: 10px;
     background-color: yellow;
@@ -67,6 +70,24 @@ select {
     font-size: 20px;
     text-decoration: underline;
     font-family: 'Lobster';
+}
+
+.new-movie {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    border: outset 5px;
+    border-radius: 10px;
+    background-color: yellow;
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    text-decoration: underline;
+    font-family: 'Lobster';
+}
+
+.new-movie:hover {
+    cursor: pointer;
 }
 
 .submit:hover {
@@ -86,10 +107,10 @@ select {
     border-left: solid 2px black;
 }
 
-.flex-table-wrapper {
-    display: flex; 
-    flex-direction: column;
-    flex: 1;
+#movieTable {
+    font-family: 'Lobster';
+    text-align: center;
+    margin: 0 auto;
 }
 
 .row1 > div {

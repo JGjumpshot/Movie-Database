@@ -1,5 +1,7 @@
 let movieList = [];
 
+let nextMovieId = 1000;
+
 function Movie (
     title,
     movieRating,
@@ -8,6 +10,7 @@ function Movie (
     genre,
     viewingOption
 ) {
+    this.id = nextMovieId++;
     this.title = title,
     this.movieRating = movieRating,
     this.yearProduced = yearProduced,
@@ -33,9 +36,9 @@ function modelGetAllMovies() {
     return movieList;
 }
 
-function modelGetMovie(title) {
+function modelGetMovie(id) {
     for (x in movieList) {
-        if (movieList[x].title === title) {
+        if (movieList[x].id === id) {
             return movieList[x];
         }
     }
