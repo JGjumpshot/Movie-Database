@@ -16,10 +16,20 @@ function onCreateBtnClicked() {
         return;
     }
 
-    let form = document.forms["form-control"];
-    // let newMovie = modelCreateMovie(
-    //     form.
-    // )
+    let form = document.forms["editForm"];
+    let newMovie = modelCreateMovie(
+        form.movieTitle.value,
+        form.movieRating.value,
+        form.yearProduced.value,
+        form.yourRating.value,
+        form.genre.checked,
+        form.viewingOption.value
+        
+    )
+
+    addTableItem(newMovie);
+
+    clearInputForm();
 }
 
 function validateControls() {
@@ -47,8 +57,8 @@ function addTableItem(movie) {
     cell.innerText = movie.title;
 
     cell = row.insertCell(1);
-    cell.innerText = movie.movieRating; //Is this function implemented? sortableName()
-
+    cell.innerText = movie.movieRating;
+    
     cell = row.insertCell(2);
     cell.innerText = movie.yearProduced;
 
