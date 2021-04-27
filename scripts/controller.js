@@ -33,7 +33,35 @@ function onCreateBtnClicked() {
 }
 
 function validateControls() {
-    return true;
+    let form = document.forms["editForm"];
+    let isValidated = true;
+
+    if (form.movieTitle.value === "") {
+        document.getElementById("movieTitleError").innerText = "Movie Title is Required";
+        isValidated = false;
+    }
+
+    else {
+        document.getElementById("movieTitleError").innerText = "";
+    }
+
+    if (form.movieRating.value === "") {
+        document.getElementById("movieRatingError").innerText = "Movie Rating is Required";
+        isValidated = false;
+    }
+
+    else {
+        document.getElementById("movieRatingError").innerText = "";
+    }
+
+    // if (!form.genre.checked === "") {  Come back to this 1:25
+    //     document.getElementById("genreError").innerText = "Genre is Required";
+    //     isValidated = false;
+    // }
+
+    // else {
+    //     document.getElementById("genreError").innerText = "";
+    // }
 }
 
 function onCancelBtnClicked() {
