@@ -24,7 +24,7 @@ function onCreateBtnClicked() {
         form.yourRating.value,
         form.genre.checked,
         form.viewingOption.value
-        
+    
     )
 
     addTableItem(newMovie);

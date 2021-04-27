@@ -55,7 +55,7 @@
                     <label for="drama">drama</label>
                     <input type="radio" name="genre" id="drama"></input>
                     <label for="comedy">comedy</label>
-                    <input type="radio" name="genre"></input>
+                    <input type="radio" id="comedy" name="genre"></input>
                     <label for="romance">romance</label>
                     <input type="radio" name="genre" id="romance"></input>
                     <label for="sci-fi/fantasy">sci-fi/fantasy</label>
@@ -72,8 +72,8 @@
                     </select>
                     <div id="viewingOptionError">&nbsp;</div>
                 </div>
-                <input name="createBtn" id="createBtn" class="submit" type="submit" value="Submit">
-                <input name="cancelBtn" id="cancelBtn" class="submit" value="Cancel">
+                <button type="button" name="createBtn" id="createBtn" class="submit" value="Create">Create</button>
+                <button type="button" name="cancelBtn" id="cancelBtn" class="submit" value="Cancel">Cancel</button>
 
             </form>
 
@@ -100,7 +100,7 @@
                     <th>Viewing Option</th>
                 </tr>
             </table>
-            <input name="newBtn" id="newBtn" class="new-movie" type="submit" value="New Movie">
+            <button name="newBtn" id="newBtn" class="new-movie" type="button" New Movie">
     </div>
 
 
@@ -114,8 +114,8 @@
         modelCreateMovie("Captain America: The Winter Soldier", "PG-13", "2014", 5, "Action/Adventure", "Blu-Ray");
         modelCreateMovie("Avengers Infinity War", "PG-13", "2018", 5, "Action/Adventure", "Streaming");
         modelCreateMovie("Avengers Endgame", "PG-13", "2019", 5, "Action/Adventure", "Streaming");
-
         onPageLoad();
+
     </script>
     </div>
 
