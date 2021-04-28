@@ -22,7 +22,7 @@ function onCreateBtnClicked() {
         form.movieRating.value,
         form.yearProduced.value,
         form.yourRating.value,
-        form.genre.checked,
+        form.comedy.checked,
         form.viewingOption.value
     
     )
