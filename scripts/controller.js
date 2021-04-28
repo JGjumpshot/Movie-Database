@@ -17,12 +17,19 @@ function onCreateBtnClicked() {
     }
 
     let form = document.forms["editForm"];
+    let genre = "";
+    for (let i = 0; i < form.length; i++) {
+        if (form[i].checked) {
+            genre = genre + form[i].value;
+        }
+    }
+    document.getElementById("genre").value = genre;
     let newMovie = modelCreateMovie(
         form.movieTitle.value,
         form.movieRating.value,
         form.yearProduced.value,
         form.yourRating.value,
-        form.comedy.checked,
+        form.genre.checked,
         form.viewingOption.value
     
     )

@@ -121,3 +121,27 @@ select {
     border-top: solid 2px black;
     border-bottom: solid 2px black;
 }
+
+#movieTitleError {
+    color: red;
+}
+
+#movieRatingError {
+    color: red;
+}
+
+#yearProducedError {
+    color: red;
+}
+
+#yourRatingError {
+    color: red;
+}
+
+#genreError {
+    color: red;
+}
+
+#viewingOptionError {
+    color: red;
+}
