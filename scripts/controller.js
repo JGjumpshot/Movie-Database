@@ -62,6 +62,7 @@ function validateControls() {
     // else {
     //     document.getElementById("genreError").innerText = "";
     // }
+    return isValidated;
 }
 
 function onCancelBtnClicked() {
