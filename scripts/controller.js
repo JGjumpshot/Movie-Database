@@ -12,6 +12,8 @@ function onPageLoad() {
 }
 
 function onCreateBtnClicked() {
+    console.log("clicked!!!");
+    // console.log(!validateControls());
     if (!validateControls()) {
         return;
     }
@@ -53,7 +55,6 @@ function validateControls() {
     else {
         document.getElementById("movieRatingError").innerText = "";
     }
-
     // if (!form.genre.checked === "") {  Come back to this 1:25
     //     document.getElementById("genreError").innerText = "Genre is Required";
     //     isValidated = false;
