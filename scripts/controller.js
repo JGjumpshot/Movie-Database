@@ -18,18 +18,19 @@ function onCreateBtnClicked() {
 
     let form = document.forms["editForm"];
     let genre = "";
-    for (let i = 0; i < form.length; i++) {
-        if (form[i].checked) {
-            genre = genre + form[i].value;
+    let radBtns = document.querySelectorAll("input[type='radio']");
+    for (let i = 0; i < radBtns.length; i++) {
+        if (radBtns[i].checked) {
+            genre += radBtns[i].value;
         }
     }
-    document.getElementById("genre").value = genre;
+    console.log(genre);
     let newMovie = modelCreateMovie(
         form.movieTitle.value,
         form.movieRating.value,
         form.yearProduced.value,
         form.yourRating.value,
-        form.genre.checked,
+        genre,
         form.viewingOption.value
     
     )
@@ -61,14 +62,15 @@ function validateControls() {
         document.getElementById("movieRatingError").innerText = "";
     }
 
-    // if (!form.genre.checked === "") {  Come back to this 1:25
-    //     document.getElementById("genreError").innerText = "Genre is Required";
-    //     isValidated = false;
-    // }
+    if (form.viewingOption.value === "") {
+        document.getElementById("viewingOptionError").innerText = "Viewing option is Required";
+        isValidated = false;
+    }
 
-    // else {
-    //     document.getElementById("genreError").innerText = "";
-    // }
+    else {
+        document.getElementById("viewingOptionError").innerText = "";
+    }
+
     return isValidated;
 }
 
