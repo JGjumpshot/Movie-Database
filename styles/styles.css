@@ -11,9 +11,8 @@
 
 #form-control {
     background-color: rgb(165, 160, 160);
-    width: 43vw;
+    width: 100vw;
     height: 90vh;
-    /* display: none; this could be a problem */
 }
 
 .form-input {
@@ -26,6 +25,7 @@
     height: 50vh;
     flex-flow: wrap;
     justify-content: space-around;
+    margin: 0 auto;
 }
 
 input[type=text] {
@@ -120,4 +120,28 @@ select {
     padding: 0px 20px;
     border-top: solid 2px black;
     border-bottom: solid 2px black;
+}
+
+#movieTitleError {
+    color: red;
+}
+
+#movieRatingError {
+    color: red;
+}
+
+#yearProducedError {
+    color: red;
+}
+
+#yourRatingError {
+    color: red;
+}
+
+#genreError {
+    color: red;
+}
+
+#viewingOptionError {
+    color: red;
 }

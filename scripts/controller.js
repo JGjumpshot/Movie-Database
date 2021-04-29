@@ -19,6 +19,13 @@ function onCreateBtnClicked() {
     }
 
     let form = document.forms["editForm"];
+    let genre = "";
+    for (let i = 0; i < form.length; i++) {
+        if (form[i].checked) {
+            genre = genre + form[i].value;
+        }
+    }
+    document.getElementById("genre").value = genre;
     let newMovie = modelCreateMovie(
         form.movieTitle.value,
         form.movieRating.value,
@@ -63,6 +70,7 @@ function validateControls() {
     // else {
     //     document.getElementById("genreError").innerText = "";
     // }
+    return isValidated;
 }
 
 function onCancelBtnClicked() {

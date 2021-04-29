@@ -2,7 +2,7 @@ let movieList = [];
 
 let nextMovieId = 1000;
 
-function Movie (
+function Movie(
     title,
     movieRating,
     yearProduced,
@@ -12,11 +12,11 @@ function Movie (
 ) {
     this.id = nextMovieId++;
     this.title = title,
-    this.movieRating = movieRating,
-    this.yearProduced = yearProduced,
-    this.yourRating = yourRating,
-    this.genre = genre,
-    this.viewingOption = viewingOption
+        this.movieRating = movieRating,
+        this.yearProduced = yearProduced,
+        this.yourRating = yourRating,
+        this.genre = genre,
+        this.viewingOption = viewingOption
 }
 
 function modelCreateMovie(
